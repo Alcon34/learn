@@ -110,5 +110,6 @@ class Product extends AbstractProduct implements ProductInterface
     public function sort(): string
     {
         // TODO: Implement sort() method.
+        return 1;
     }
 }
