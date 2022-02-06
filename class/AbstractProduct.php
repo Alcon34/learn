@@ -9,7 +9,6 @@ abstract class AbstractProduct implements ProductInterface
     abstract public function getPrice(): float;
     abstract public function getDescription(): string;
 
-
     protected function ini(string $table)
     {
         $servername = "localhost";

@@ -1,4 +1,5 @@
 <?php
+include_once 'form.html';
 
 include_once 'class/ProdVegetables.php';
 
@@ -32,6 +33,8 @@ $e = new ProductType(1);
 echo 'ProducsdfsdftArt:';
 echo $e->getName();
 echo '<br>';
+
+
 
 
 
