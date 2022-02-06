@@ -13,7 +13,7 @@ abstract class AbstractProduct implements ProductInterface
     {
         $servername = "localhost";
         $dbname = "learn";
-        $username =  "epoxid_web";
+        $username = "epoxid_web";
         $password = "hS96xDA_wi2Gx8ST_";
         $charset = 'utf8';
         $connection = new mysqli($servername, $username, $password, $dbname);
@@ -25,14 +25,9 @@ abstract class AbstractProduct implements ProductInterface
         //echo "Connected successfully <br>";
 
         $condition = $this->id;
-
         $str = $connection->query('SELECT '.$table.' FROM product WHERE id = '.$condition.'');
-        $row_name = array();
-        while($value= mysqli_fetch_array($str, MYSQLI_NUM)) {
-            $row_name[] = $value;
-        }
-        return $row_name[0][0];
-
+        $row = $str->fetch_row();
+        return $row[0];
     }
 
 }

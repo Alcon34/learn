@@ -28,9 +28,9 @@ echo 'ProductArt:';
 echo $pr->getArt();
 echo '<br>';
 
-$e = new ProductType(1);
+$e = new ProdVegetables(1);
 
-echo 'ProducsdfsdftArt:';
+echo 'ProducVegetArt:';
 echo $e->getName();
 echo '<br>';
 
