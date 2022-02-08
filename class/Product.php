@@ -89,14 +89,12 @@ class Product extends AbstractProduct implements ProductInterface
     }
 
 
-
-
     /**
      * @return int
      */
-    public static function getHjkk(): int
+    public static function getStatic(): int
     {
-        return self::$hjkk;
+        return self::$static;
     }
 
 
@@ -104,7 +102,7 @@ class Product extends AbstractProduct implements ProductInterface
     {
         return 12;
     }
-    public static $hjkk = 45;
+    public static $static = 45;
 
 
     public function sort(): string

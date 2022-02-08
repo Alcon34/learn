@@ -14,20 +14,26 @@ abstract class AbstractProduct implements ProductInterface
         $servername = "localhost";
         $dbname = "learn";
         $username = "epoxid_web";
-        $password = "hS96xDA_wi2Gx8ST_";
+        $password = "hS96xDA_wi2Gx8ST_1";
         $charset = 'utf8';
         $connection = new mysqli($servername, $username, $password, $dbname);
         $connection->set_charset($charset);
 
-        if ($connection->connect_error) {
-            die("Connection failed: " . $connection->connect_error);
+        try {
+            if ($connection->connect_error) {
+                throw new Exception("Connection failed: " . $connection->connect_error);
+            }
+            $condition = $this->id;
+            $str = $connection->query('SELECT '.$table.' FROM product WHERE id = '.$condition.'');
+            $row = $str->fetch_row();
+            return $row[0];
         }
-        //echo "Connected successfully <br>";
 
-        $condition = $this->id;
-        $str = $connection->query('SELECT '.$table.' FROM product WHERE id = '.$condition.'');
-        $row = $str->fetch_row();
-        return $row[0];
+
+        catch ( Throwable $exception){
+            echo $exception->getMessage();
+            die;
+        }
     }
 
 }

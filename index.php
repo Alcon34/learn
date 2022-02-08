@@ -1,6 +1,5 @@
 <?php
 include_once 'form.html';
-
 include_once 'class/ProdVegetables.php';
 
 $pr = new Product(1);
