@@ -14,7 +14,7 @@ abstract class AbstractProduct implements ProductInterface
         $servername = "localhost";
         $dbname = "learn";
         $username = "epoxid_web";
-        $password = "hS96xDA_wi2Gx8ST_1";
+        $password = "hS96xDA_wi2Gx8ST_";
         $charset = 'utf8';
         $connection = new mysqli($servername, $username, $password, $dbname);
         $connection->set_charset($charset);

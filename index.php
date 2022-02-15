@@ -27,11 +27,16 @@ echo 'ProductArt:';
 echo $pr->getArt();
 echo '<br>';
 
+
 $e = new ProdVegetables(1);
+
+
+var_dump(ini_get('upload_max_filesize'));
 
 echo 'ProducVegetArt:';
 echo $e->getName();
 echo '<br>';
+echo $e->getStatic();
 
 
 

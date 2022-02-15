@@ -33,9 +33,9 @@ class Product extends AbstractProduct implements ProductInterface
      */
 
     /**
-     * @param $id
+     * @param int $id
      */
-    public function __construct($id)
+    public function  __construct(int $id)
     {
         $this->id = $id;
     }
@@ -97,12 +97,7 @@ class Product extends AbstractProduct implements ProductInterface
         return self::$static;
     }
 
-
-    public static function random()
-    {
-        return 12;
-    }
-    public static $static = 45;
+    private static int $static = 45;
 
 
     public function sort(): string
