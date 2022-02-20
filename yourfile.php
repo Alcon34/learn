@@ -2,7 +2,7 @@
 if (isset($_GET['filename'])){
     $fileName = $_GET['filename'];
 }
-$dir = './downloads/';
+$dir = 'downloads/';
 $url = $dir. $fileName;
 
 include_once 'yourfile.html';
@@ -13,3 +13,4 @@ for ($i = 0; $i < count($files)-2; $i++) {
     echo '<img src="'.$dir . $files[$i].'" width="400">';
     echo '<br>';
 }
+include_once 'yourfile.html';

@@ -19,7 +19,8 @@ class MySessionJSON implements SessionHandlerInterface
      */
     public function write($id, $data): bool
     {
-        !(file_put_contents("./Session/sess_$id.json", json_encode($data, JSON_FORCE_OBJECT)) === false);
+        $json = new MyJson();
+        !(file_put_contents("./Session/sess_$id.json", $json->toJson($data)) === false);
         return true;
     }
 
@@ -29,8 +30,8 @@ class MySessionJSON implements SessionHandlerInterface
      */
     public function read($id)
     {
-        if (file_exists("./Session/sess_$id.json")) {
-            return json_decode(file_get_contents("./Session/sess_$id.json"), JSON_FORCE_OBJECT);
+       if (file_exists("./Session/sess_$id.json")) {
+           return file_get_contents("./Session/sess_$id.json");
         } else {
             $fp = fopen("./Session/sess_$id.json", "a+");
             fclose($fp);

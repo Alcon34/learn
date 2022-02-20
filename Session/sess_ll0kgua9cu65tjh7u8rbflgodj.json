@@ -1,1 +1,1 @@
-"var1|s:5:\"glass\";var2|s:4:\"bar!\";var3|s:4:\"sar!\";var4|s:3:\"sa4\";var5|s:4:\"ssa4\";"
+{"var1":{"data":"glass","s":5},"var2":{"data":"bar!","s":4}}
