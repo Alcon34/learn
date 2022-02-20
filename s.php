@@ -19,10 +19,10 @@ session_set_save_handler($mySessionJSON, true);
 session_start();
 
 $_SESSION['var1'] = "glass";
-$_SESSION['var2'] = "bar!";
+$_SESSION['var2'] = "bar!gfhj";
 
 
 print_r ($_SESSION);
 session_write_close();
-//phpinfo();
+phpinfo();
 

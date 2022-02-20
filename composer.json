@@ -1,0 +1,14 @@
+{
+  "name": "tsimashkou/package",
+  "type": "package",
+  "description": "Composer package",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dataart\\Package\\": "src/"
+    }
+  }
+}
