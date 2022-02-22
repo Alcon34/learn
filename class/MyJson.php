@@ -2,7 +2,7 @@
 
 class MyJson
 {
-    public function toJson($data): string
+    public function toJson(string $data): string
     {
         $count = substr_count($data, ';');
         $json = '{';

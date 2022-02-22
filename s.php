@@ -24,5 +24,5 @@ $_SESSION['var2'] = "bar!gfhj";
 
 print_r ($_SESSION);
 session_write_close();
-phpinfo();
+//phpinfo();
 
